@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,10 +9,6 @@ export default {
   ],
   theme: {
     extend: {
-      // colors: {
-      //   background: "var(--background)",
-      //   foreground: "var(--foreground)",
-      // },
       fontSize: {
         "9": "0.563rem",
         "10": "0.625rem",
@@ -19,10 +16,15 @@ export default {
         "14": "0.875rem",
         "15": "0.938rem",
         "16": "1rem",
+        "18": "1.125rem",
         "20": "1.25rem",
         "21": "1.313rem",
         "22": "1.375rem",
         "24": "1.5rem",
+        "35": "2.188rem",
+        "40": "2.5rem",
+        "48": "3rem",
+        "60": "3.75rem",
         "72": "4.5rem",
       },
       colors: {
@@ -34,16 +36,17 @@ export default {
           lighter: "#FFEDC2",
         },
         gray: {
+          DEFAULT: "#f6f6f6",
           disabled: "#CACBD1",
           second_border: "#D1D9E2",
           border: "#d1d9de",
           number: "#999CA0",
           lightest: "#8D909C",
-          lighter: "#C5C2B0",
-          light: "#575b6c",
+          lighter: "#EEEEEE",
+          light: "#545454",
           hover: "#f5f5f5",
           dark: "#e2e2e2",
-          modal: "#a9a9a9",
+          modal: "#afafaf",
           selected: "#f5f5f5",
         },
         border: "hsl(var(--border))",
@@ -93,9 +96,19 @@ export default {
           lighter: "#F8F8F8",
           dark: "#f6f1ff",
         },
+        blue: {
+          DEFAULT: "#039dee",
+        },
         orange: {
           light: "#FFDCCC",
           DEFAULT: "#EC6608",
+        },
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
         },
       },
       borderRadius: {
@@ -117,12 +130,20 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       animation: {
@@ -131,5 +152,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
