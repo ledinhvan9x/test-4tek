@@ -5,10 +5,24 @@ import { ArrowLeft } from '@/public/icons';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useRef } from 'react';
 
 export default function Partners() {
   const t = useTranslations('HomePage');
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const slideList = (direction: 'left' | 'right') => {
+    if (!containerRef.current) return;
+    const scrollAmount = 200;
+    const container = containerRef.current;
+
+    if (direction === 'left') {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div
       id="ourPartners"
@@ -21,30 +35,42 @@ export default function Partners() {
         {t('ourPartners')}
       </h1>
 
-      <div className="flex gap-10 overflow-x-auto h-auto w-screen lg:w-[70vw] scrollbar-none">
-        <div className="flex gap-5 relative">
-          {partnersData.map((item, index) => (
-            <Link
-              href={item.link}
-              target="_blank"
-              key={index}
-              className="lg:w-[260px] lg:h-[100px] w-[188px] h-[72px]"
-            >
-              <Image
-                src={item.logo}
-                alt={item.title}
-                className="cursor-pointer transition-all duration-200 hover:bg-gradient-to-r from-[#ffa07a] to-[#ffb07a] rounded-lg"
-                width={260}
-                height={100}
-              />
-            </Link>
-          ))}
-          <ArrowLeft
-            width={40}
-            height={40}
-            className="absolute top-1/2 -left-0 cursor-pointer -translate-y-1/2 hover:scale-100"
-          />
+      <div className="relative">
+        <div
+          ref={containerRef}
+          className="flex gap-10 overflow-x-auto h-auto w-screen lg:w-[70vw] scrollbar-none"
+        >
+          <div className="flex gap-5">
+            {partnersData.map((item, index) => (
+              <Link
+                href={item.link}
+                target="_blank"
+                key={index}
+                className="lg:w-[260px] lg:h-[100px] w-[188px] h-[72px]"
+              >
+                <Image
+                  src={item.logo}
+                  alt={item.title}
+                  className="cursor-pointer transition-all duration-200 hover:bg-gradient-to-r from-[#ffa07a] to-[#ffb07a] rounded-lg"
+                  width={260}
+                  height={100}
+                />
+              </Link>
+            ))}
+          </div>
         </div>
+        <ArrowLeft
+          onClick={() => slideList('left')}
+          width={40}
+          height={40}
+          className="absolute left-4 top-1/2 lg:-left-10 cursor-pointer -translate-y-1/2 hover:scale-110 transition-all duration-200"
+        />
+        <ArrowLeft
+          onClick={() => slideList('right')}
+          width={40}
+          height={40}
+          className="absolute rotate-180 right-4 top-1/2 lg:-right-10 cursor-pointer -translate-y-1/2 hover:scale-110 transition-all duration-200"
+        />
       </div>
     </div>
   );

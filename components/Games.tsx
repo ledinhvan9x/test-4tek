@@ -59,7 +59,7 @@ export default function Games() {
           <div
             key={index}
             className={`cursor-pointer relative transition duration-300 ease-in-out transform hover:scale-[1.03] group ${
-              index % 2 === 0 ? '' : 'absolute top-9 md:top-14 lg:top-[118px]' // Add a margin-top to odd-indexed items
+              index % 2 === 0 ? '' : 'absolute top-9 md:top-14 lg:top-[118px]'
             }`}
           >
             <div className="rounded-xl overflow-hidden bg-red-300 flex">

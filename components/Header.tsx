@@ -33,7 +33,6 @@ export default function Header() {
     }
   };
   return (
-    // chuyen ngon ngu push khong dung
     <>
       <div className="bg-[url(/assets/bg-header-mobile.png)] lg:bg-[url(/assets/bg-header.png)] w-screen pb-20 lg:pb-[180px] lg:bg-center bg-no-repeat bg-cover relative">
         <Navbar />
