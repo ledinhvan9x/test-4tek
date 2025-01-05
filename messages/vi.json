@@ -24,6 +24,7 @@
     "ourPartners": "Đối tác",
     "address": "Địa chỉ",
     "subscribe": "Theo dõi",
-    "subscribeDescription": "Đăng ký nhận bản tin của chúng tôi và là người đầu tiên biết về các cập nhật của chúng tôi"
+    "subscribeDescription": "Đăng ký nhận bản tin của chúng tôi và là người đầu tiên biết về các cập nhật của chúng tôi",
+    "successSendMail": "Đăng ký nhận bản tin thành công cho email: {email}!"
   }
 }

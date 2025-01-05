@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 import {
   Select,
@@ -7,11 +7,11 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from '@/components/ui/select';
 
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { languageData } from "@/data";
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { languageData } from '@/data';
 
 type Props = {
   isMobile?: boolean;
@@ -20,30 +20,30 @@ export default function LanguageSelection({ isMobile }: Props) {
   const pathname = usePathname();
 
   const handleLanguageChange = (value: string) => {
-    const path = pathname.split("/").slice(2).join("/");
+    const path = pathname.split('/').slice(2).join('/');
     const newUrl = `${window.location.origin}/${value}/${path}`;
-    window.history.pushState({}, "", newUrl);
+    window.history.pushState({}, '', newUrl);
     window.location.reload();
   };
 
   return (
     <div className="relative">
       <Select
-        value={pathname.split("/")[1]}
+        value={pathname.split('/')[1]}
         onValueChange={handleLanguageChange}
       >
         <SelectTrigger
           className={`w-20 md:w-10 ${
             !isMobile
-              ? "custom-select"
-              : "custom-select-mobile border-gray-modal"
+              ? 'custom-select'
+              : 'custom-select-mobile border-gray-modal'
           }`}
         >
           <SelectValue />
         </SelectTrigger>
         <SelectContent
           className={`${
-            !isMobile && "absolute right-0 translate-x-10 custom-padding"
+            !isMobile && 'absolute right-0 translate-x-10 custom-padding'
           }`}
         >
           <SelectGroup>

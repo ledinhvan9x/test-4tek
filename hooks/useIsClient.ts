@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export function useIsClient(): boolean {
   const [isClient, setIsClient] = useState(false);

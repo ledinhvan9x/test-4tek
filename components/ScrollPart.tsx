@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { ArrowDownIcon } from "@/public/icons";
+import { useEffect, useState } from 'react';
+import { ArrowDownIcon } from '@/public/icons';
 
 export default function ScrollPart() {
   const [isScrolledToBottom, setIsScrolledToBottom] = useState(false);
@@ -13,20 +13,20 @@ export default function ScrollPart() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const clickIcon = () => {
     if (isScrolledToBottom) {
       window.scrollTo({
         top: 0,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     } else {
       window.scrollTo({
         top: document.body.scrollHeight,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
   };
@@ -34,7 +34,7 @@ export default function ScrollPart() {
   return (
     <div className="fixed bottom-4 lg:bottom-20 right-4 lg:right-20">
       <ArrowDownIcon
-        className={`cursor-pointer ${isScrolledToBottom ? "rotate-180" : ""}`}
+        className={`cursor-pointer ${isScrolledToBottom ? 'rotate-180' : ''}`}
         onClick={clickIcon}
       />
     </div>

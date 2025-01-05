@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import illustratorImg from "@/public/assets/illustrator.png";
-import pinMapImg from "@/public/assets/pin-map.png";
-import { useIsClient } from "@/hooks/useIsClient";
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import illustratorImg from '@/public/assets/illustrator.png';
+import pinMapImg from '@/public/assets/pin-map.png';
+import { useIsClient } from '@/hooks/useIsClient';
 import {
   AccessIcon,
   AccessSmallIcon,
@@ -13,40 +13,40 @@ import {
   DesignSmallIcon,
   TeamIcon,
   TeamSmallIcon,
-} from "@/public/icons";
+} from '@/public/icons';
 
 export default function AboutUs() {
   const isClient = useIsClient();
 
-  const t = useTranslations("HomePage");
+  const t = useTranslations('HomePage');
   const listFeatures = [
     {
       icon: <AccessIcon className={`hidden lg:block`} />,
       iconMobile: <AccessSmallIcon className={`block lg:hidden `} />,
-      title: t("twentyFourHour"),
-      desc: t("accessDescription"),
+      title: t('twentyFourHour'),
+      desc: t('accessDescription'),
     },
     {
       icon: <DesignIcon className={`hidden lg:block`} />,
       iconMobile: <DesignSmallIcon className={`block lg:hidden `} />,
-      title: t("design"),
-      desc: t("designDescription"),
+      title: t('design'),
+      desc: t('designDescription'),
     },
     {
       icon: <TeamIcon className={`hidden lg:block`} />,
       iconMobile: <TeamSmallIcon className={`block lg:hidden`} />,
-      title: t("team"),
-      desc: t("teamDescription"),
+      title: t('team'),
+      desc: t('teamDescription'),
     },
   ];
   const usersAndGames = [
     {
-      title: t("users"),
+      title: t('users'),
       content:
         '<p class="text-blue text-[44px] leading-12 lg:text-[80px] lg:leading-[96px]">600<span class="text-20 lg:text-40 leading-6 lg:leading-12">M</span><span class="text-[36px] lg:text-[80px] leading-11">+</span></p>',
     },
     {
-      title: t("games"),
+      title: t('games'),
       content:
         '<p class="text-blue text-[44px] leading-12 lg:text-[80px] lg:leading-[96px]">135<span class="text-[36px] lg:text-[80px] leading-11">+</span></p>',
     },
@@ -63,12 +63,12 @@ export default function AboutUs() {
           <div className="md:flex md:flex-col md:items-center lg:block">
             <h1
               className="text-40 lg:text-60 leading-[50px] lg:leading-[60px] text-black-darkest font-[900] mb-4 lg:mb-10"
-              style={{ fontFamily: "Playfair Display" }}
+              style={{ fontFamily: 'Playfair Display' }}
             >
-              {t("aboutUs")}
+              {t('aboutUs')}
             </h1>
             <p className="max-w-[340px] lg:max-w-[560px] lg:mt-[10px]">
-              {t("description")}
+              {t('description')}
             </p>
           </div>
           <div className="flex lg:flex-col gap-4 lg:gap-10 mt-10 lg:mt-20 mb-10 lg:mb-0 md:justify-center">
@@ -108,13 +108,13 @@ export default function AboutUs() {
       </div>
       <div className="flex flex-col items-center mt-10 lg:mt-[68px]">
         <motion.div
-          initial={{ opacity: 0.9, x: "-5vw", scale: 0.8, rotate: -5 }}
-          animate={{ opacity: 1, x: "5vw", scale: 1, rotate: 5 }}
+          initial={{ opacity: 0.9, x: '-5vw', scale: 0.8, rotate: -5 }}
+          animate={{ opacity: 1, x: '5vw', scale: 1, rotate: 5 }}
           transition={{
             duration: 1,
-            ease: "easeInOut",
+            ease: 'easeInOut',
             repeat: Infinity,
-            repeatType: "reverse",
+            repeatType: 'reverse',
           }}
         >
           <Image

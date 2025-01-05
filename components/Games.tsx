@@ -1,10 +1,10 @@
-import { listGames } from "@/data";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
+import { listGames } from '@/data';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Games() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations('HomePage');
   return (
     <div
       className="flex flex-col justify-center mb-[84px] md:mb-[120px] lg:mb-[246px] mt-5 lg:mt-0 px-4 lg:px-6 xl:px-8 2xl:px-10"
@@ -12,12 +12,12 @@ export default function Games() {
     >
       <h1
         className="text-60 text-black-darkest font-[900] font-playfair leading-[60px] text-center"
-        style={{ fontFamily: "Playfair Display" }}
+        style={{ fontFamily: 'Playfair Display' }}
       >
-        {t("games")}
+        {t('games')}
       </h1>
       <p className="max-w-[350px] text-center lg:max-w-[840px] mx-auto mt-6 mb-10 lg:mb-20 md:max-w-[650px]">
-        {t("gamesDescription")}
+        {t('gamesDescription')}
       </p>
       {/* <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 xl:gap-6 2xl:gap-8">
         {listGames.map((item, index) => (
@@ -59,7 +59,7 @@ export default function Games() {
           <div
             key={index}
             className={`cursor-pointer relative transition duration-300 ease-in-out transform hover:scale-[1.03] group ${
-              index % 2 === 0 ? "" : "absolute top-9 md:top-14 lg:top-[118px]" // Add a margin-top to odd-indexed items
+              index % 2 === 0 ? '' : 'absolute top-9 md:top-14 lg:top-[118px]' // Add a margin-top to odd-indexed items
             }`}
           >
             <div className="rounded-xl overflow-hidden bg-red-300 flex">

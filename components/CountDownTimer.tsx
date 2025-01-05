@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { INITIAL_TIME_LEFT } from "@/data";
-import { useTranslations } from "next-intl";
-import React, { useEffect, useState } from "react";
+import { INITIAL_TIME_LEFT } from '@/data';
+import { useTranslations } from 'next-intl';
+import React, { useEffect, useState } from 'react';
 
 interface Props {
   deadline: Date;
@@ -16,7 +16,7 @@ interface CountdownTimeLeft {
 }
 
 export default function CountDownTimer({ deadline }: Props) {
-  const t = useTranslations("HomePage");
+  const t = useTranslations('HomePage');
 
   const [timeLeft, setTimeLeft] =
     useState<CountdownTimeLeft>(INITIAL_TIME_LEFT);
@@ -45,7 +45,6 @@ export default function CountDownTimer({ deadline }: Props) {
         seconds: Math.floor((difference / 1000) % 60),
       };
     }
-
     return timeLeft;
   }
 
@@ -57,10 +56,10 @@ export default function CountDownTimer({ deadline }: Props) {
             <div className="flex flex-col text-black-darkest items-center gap-1">
               <div
                 className="flex items-center font-[900] tracking-[4.8px] text-[36px] lg:text-60 leading-[45px] lg:leading-[64px]"
-                style={{ fontFamily: "Playfair Display" }}
+                style={{ fontFamily: 'Playfair Display' }}
               >
-                <p className="">{Math.floor(value / 10)}</p>
-                <p className="">{value % 10}</p>
+                <p>{Math.floor(value / 10)}</p>
+                <p>{value % 10}</p>
               </div>
               <p className="font-bold text-16 tracking-[-0.65px]">
                 {t(unit.toString())}

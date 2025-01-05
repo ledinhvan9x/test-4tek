@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { partnersData } from "@/data";
-import { ArrowLeft } from "@/public/icons";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import { partnersData } from '@/data';
+import { ArrowLeft } from '@/public/icons';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 export default function Partners() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations('HomePage');
   return (
     <div
       id="ourPartners"
@@ -16,9 +16,9 @@ export default function Partners() {
     >
       <h1
         className="text-40 lg:text-60 text-black-darkest font-[900] font-playfair leading-[50px] lg:leading-[80px] text-center"
-        style={{ fontFamily: "Playfair Display" }}
+        style={{ fontFamily: 'Playfair Display' }}
       >
-        {t("ourPartners")}
+        {t('ourPartners')}
       </h1>
 
       <div className="flex gap-10 overflow-x-auto h-auto w-screen lg:w-[70vw] scrollbar-none">

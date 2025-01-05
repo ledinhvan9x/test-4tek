@@ -25,6 +25,6 @@
     "address": "Address",
     "subscribe": "Subscribe",
     "subscribeDescription": "Subscribe to our newsletter and be the first to know about our updates",
-    "success": ""
+    "successSendMail": "Successfully subscribed to the newsletter for the email: {email}!"
   }
 }
