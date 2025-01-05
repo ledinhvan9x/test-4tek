@@ -15,7 +15,7 @@ import { isDateInPast, validateEmail } from '@/utils';
 export default function Header() {
   const t = useTranslations('HomePage');
 
-  const countdownDate = new Date('2025-01-06T23:18:07');
+  const countdownDate = new Date('2025-01-08T23:18:07');
 
   const [email, setEmail] = useState('');
 

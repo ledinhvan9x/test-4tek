@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     site: '@site',
     creator: '@creator',
     images:
-      'https://i1-thethao.vnecdn.net/2025/01/05/tua-n-ha-i-7-jpeg-1736091062-1-5809-8901-1736091430.jpg?w=680&h=0&q=100&dpr=2&fit=crop&s=Wbv4obFlg8ysQKJgHbOKZw',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHSsKBozMa4f5Diq9INmZhbetuqkXR0SEqlQ&s',
   },
   openGraph: {
     type: 'website',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: 'ETech',
     images: [
       {
-        url: 'https://i1-thethao.vnecdn.net/2025/01/05/tua-n-ha-i-7-jpeg-1736091062-1-5809-8901-1736091430.jpg?w=680&h=0&q=100&dpr=2&fit=crop&s=Wbv4obFlg8ysQKJgHbOKZw',
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHSsKBozMa4f5Diq9INmZhbetuqkXR0SEqlQ&s',
       },
     ],
   },
